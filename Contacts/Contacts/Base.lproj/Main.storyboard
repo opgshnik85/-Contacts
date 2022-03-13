@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YzJ-Og-gte">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aqq-Ae-BMD"/>
+                                    <barButtonItem title="Создать контакт" id="7s8-xt-rT8">
+                                        <connections>
+                                            <action selector="showNewAlert" destination="BYZ-38-t0r" id="QB4-QA-ZQp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-tF-wUn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rrt-Dk-vKy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7zu-3l-4lO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YzJ-Og-gte" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3cp-Ie-qZ0"/>
+                            <constraint firstItem="Ihi-tF-wUn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4uj-VO-ydX"/>
+                            <constraint firstItem="Ihi-tF-wUn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6gC-vT-Dl0"/>
+                            <constraint firstItem="YzJ-Og-gte" firstAttribute="top" secondItem="Ihi-tF-wUn" secondAttribute="bottom" id="9fl-V1-T2U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YzJ-Og-gte" secondAttribute="bottom" id="Kfk-do-dIr"/>
+                            <constraint firstItem="Ihi-tF-wUn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lkA-kq-3T7"/>
+                            <constraint firstItem="YzJ-Og-gte" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pf5-Gf-mpm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ihi-tF-wUn" id="gHe-Lr-gvf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113.04347826086958" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
